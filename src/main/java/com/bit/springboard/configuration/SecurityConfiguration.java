@@ -60,7 +60,7 @@ public class SecurityConfiguration {
                     authorizeRequests.requestMatchers("/user/login").permitAll();
                     authorizeRequests.requestMatchers("/api/**").permitAll();
                     //이외의 요청은 인증된 사용자만 사용자만 사용가능
-                    //리앵ㄱ트에 route 설정해놓은 /, /login, /join, /board-list ...... 페이지는 볼 수 있게 
+                    //리앵ㄱ트에 route 설정해놓은 /, /login, /join, /board-list ...... 페이지는 볼 수 있게
                     authorizeRequests.anyRequest().permitAll();
                 })
                 .addFilterAfter(jwtAuthenticationFilter, CorsFilter.class)
